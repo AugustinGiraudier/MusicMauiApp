@@ -6,10 +6,49 @@
     xmlns:local="clr-namespace:MAUI_Music"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+
+        <Tab 
+            Icon="play"
+            Title="Ecouter">
+            <ShellContent
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+        </Tab>
+
+        <Tab 
+            Icon="grid"
+            Title="Explorer">
+            <ShellContent
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+        </Tab>
+
+        <Tab 
+            Icon="radio"
+            Title="Radio">
+            <ShellContent
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+        </Tab>
+
+        <Tab 
+            Icon="music"
+            Title="Bibliothèque">
+            <ShellContent
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+        </Tab>
+
+        <Tab 
+            Icon="search"
+            Title="Rechercher">
+            <ShellContent
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+        </Tab>
+
+    </TabBar>
 
 </Shell>
 
