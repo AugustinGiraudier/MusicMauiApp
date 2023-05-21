@@ -61,18 +61,19 @@
                                 </VisualStateGroup>
                             </VisualStateManager.VisualStateGroups>
 
-                            <Frame
+                            <Border
                                 Margin="0,0,0,0"
-                                CornerRadius="8"
-                                IsClippedToBounds="True"
                                 HeightRequest="170"
                                 WidthRequest="170">
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="8" />
+                                    </Border.StrokeShape>
                                 <Image 
                                     x:Name="albumImage"
                                     Source="{Binding Image}"
                                     HeightRequest="170"
                                     WidthRequest="170"/>
-                            </Frame>
+                            </Border>
 
                             <Label Text="{Binding Name}"
                                     Margin="15,0,0,0"
