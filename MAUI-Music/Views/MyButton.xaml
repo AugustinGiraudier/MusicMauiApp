@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MAUI_Music.Views.MyButton">
@@ -11,15 +11,17 @@
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center"
                      Margin="6">
 
-            <ImageButton Source="{Binding Icon}"
+            <Image Source="{Binding Icon}"
                          HeightRequest="15"
+                         MaximumHeightRequest="15"
+                         MaximumWidthRequest="15"
                          WidthRequest="15"/>
 
             <Label Text="{Binding Text}" 
                        FontSize="17"
                        FontAttributes="Bold"
                        TextColor="{StaticResource Tertiary}"
-                       Margin="5,0,5,0"/>
+                       Margin="5,0,5,3"/>
         </StackLayout>
     </Border>
 
