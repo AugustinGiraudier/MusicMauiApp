@@ -3,32 +3,85 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:views="clr-namespace:MAUI_Music.Views"
              x:Class="MAUI_Music.Pages.BibliothequePage"
+             xmlns:model="clr-namespace:MAUI_Music.Model"
              Title="Bibliotheque"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
-             ios:Page.LargeTitleDisplay="Always">
-    <VerticalStackLayout>
+             ios:Page.LargeTitleDisplay="Always"
+             x:Name="view">
 
-        <Label Margin="15">
-            <Label.FormattedText>
-                <FormattedString>
-                    <Span Text="Bibliothèque" FontAttributes="Bold" FontSize="Title"/>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+    <ScrollView>
+    
+        <VerticalStackLayout>
 
-        <views:ToolRow Text="Playlists" Icon="playlists"/>
-        <BoxView Margin="45,10,0,10" HeightRequest="1" Color="LightGray" IsVisible="true"/>
+            <Label Margin="15">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Bibliothèque" FontAttributes="Bold" FontSize="Title"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <views:ToolRow Text="Playlists" Icon="playlists"/>
+            <BoxView Margin="45,10,0,10" HeightRequest="1" Color="LightGray" IsVisible="true"/>
         
-        <views:ToolRow Text="Artistes" Icon="artists"/>
-        <BoxView Margin="45,10,0,10" HeightRequest="1" Color="LightGray" IsVisible="true"/>
+            <views:ToolRow Text="Artistes" Icon="artists"/>
+            <BoxView Margin="45,10,0,10" HeightRequest="1" Color="LightGray" IsVisible="true"/>
         
-        <views:ToolRow Text="Albums" Icon="albums"/>
-        <BoxView Margin="45,10,0,10" HeightRequest="1" Color="LightGray" IsVisible="true"/>
+            <views:ToolRow Text="Albums" Icon="albums"/>
+            <BoxView Margin="45,10,0,10" HeightRequest="1" Color="LightGray" IsVisible="true"/>
         
-        <views:ToolRow Text="Compilaitions" Icon="compilations"/>
-        <BoxView Margin="45,10,0,10" HeightRequest="1" Color="LightGray" IsVisible="true"/>
+            <views:ToolRow Text="Compilaitions" Icon="compilations"/>
+            <BoxView Margin="45,10,0,10" HeightRequest="1" Color="LightGray" IsVisible="true"/>
+
+            <Label Margin="15">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Ajouts récents" FontAttributes="Bold" FontSize="Medium"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
 
 
+            <CollectionView ItemsSource="{Binding Albums}"
+                                ItemsLayout="VerticalGrid, 2"
+                                SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Album">
+                        <StackLayout Margin="12">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup Name="CommonStates">
+                                    <VisualState Name="Normal"></VisualState>
+                                    <VisualState Name="Selected">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="LightSkyBlue"></Setter>
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Border
+                                Margin="0,0,0,0">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="8" />
+                                </Border.StrokeShape>
+                                <Image 
+                                    x:Name="albumImage"
+                                    Source="{Binding Image}"
+                                    Aspect="AspectFill" />
+                            </Border>
 
-    </VerticalStackLayout>
+                            <Label Text="{Binding Name}"
+                                           TextColor="Black" 
+                                           LineBreakMode="TailTruncation" />
+                            <Label Text="{Binding Author}"        
+                                           TextColor="Grey" 
+                                           LineBreakMode="TailTruncation" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+        </VerticalStackLayout>
+
+    </ScrollView>
 </ContentPage>

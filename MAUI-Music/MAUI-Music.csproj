@@ -45,6 +45,7 @@
 		<MauiFont Include="Resources\Fonts\*" />
 
 		<MauiImage Update="Resources\Images\icons\**" BaseSize="20,20" />
+		<MauiImage Update="Resources\Images\albums\**" BaseSize="140,140" />
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
@@ -67,5 +68,7 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
+
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionMAUIMusicHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 </Project>
