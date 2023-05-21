@@ -46,7 +46,7 @@
 
 		<MauiImage Update="Resources\Images\icons\**" BaseSize="20,20" />
 		<MauiImage Update="Resources\Images\buttonIcon\**" BaseSize="10,10" />
-		<MauiImage Update="Resources\Images\albums\**" BaseSize="140,140" />
+		<MauiImage Update="Resources\Images\albums\**" BaseSize="220,220" />
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />

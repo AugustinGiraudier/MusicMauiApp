@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MAUI_Music.Views.ToolRow"
@@ -7,7 +7,7 @@
 
     <StackLayout Orientation="Horizontal"
                  Padding="20,0,20,0"
-                 BackgroundColor="White">
+                 BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}">
         <Image Source="{Binding Icon, Source={x:Reference view}}"
                WidthRequest="16"
                HeightRequest="16"
@@ -15,7 +15,7 @@
                HorizontalOptions="Start" />
         <Label Text="{Binding Text, Source={x:Reference view}}"
                FontSize="16"
-               TextColor="Black"
+               TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
                HorizontalOptions="StartAndExpand" />
         <Image Source="arrow_right"
                WidthRequest="16"

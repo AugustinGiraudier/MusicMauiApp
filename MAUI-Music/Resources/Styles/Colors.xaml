@@ -9,6 +9,10 @@
     <Color x:Key="Tertiary">#FA1C37</Color>
     <Color x:Key="White">White</Color>
     <Color x:Key="Black">Black</Color>
+
+    <Color x:Key="bgButtonLight">#EEEEEF</Color>
+    <Color x:Key="bgButtonDark">#1C1C1E</Color>
+
     <Color x:Key="Gray100">#E1E1E1</Color>
     <Color x:Key="Gray200">#C8C8C8</Color>
     <Color x:Key="Gray300">#ACACAC</Color>

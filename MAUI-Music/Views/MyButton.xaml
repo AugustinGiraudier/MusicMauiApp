@@ -4,7 +4,7 @@
              x:Class="MAUI_Music.Views.MyButton">
 
 
-    <Border StrokeThickness="0" BackgroundColor="#EEEEEF" Padding="15,5,15,5" WidthRequest="140">
+    <Border StrokeThickness="0" BackgroundColor="{AppThemeBinding Light={StaticResource bgButtonLight}, Dark={StaticResource bgButtonDark}}" Padding="15,5,15,5" WidthRequest="140">
         <Border.StrokeShape>
             <RoundRectangle CornerRadius="8" />
         </Border.StrokeShape>
