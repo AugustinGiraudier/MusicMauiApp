@@ -9,16 +9,26 @@
     <VerticalStackLayout>
 
         <Label Margin="15">
-           <Label.FormattedText>
-              <FormattedString>
-                 <Span Text="Bibliothèque" FontAttributes="Bold" FontSize="Title"/>
-              </FormattedString>
-           </Label.FormattedText>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Bibliothèque" FontAttributes="Bold" FontSize="Title"/>
+                </FormattedString>
+            </Label.FormattedText>
         </Label>
-        <Label Text="ici" />
-        <Label Text="ici" />
 
-        <views:VueTest Text="sdd" />
+        <views:ToolRow Text="Playlists" Icon="playlists"/>
+        <BoxView Margin="45,10,0,10" HeightRequest="1" Color="LightGray" IsVisible="true"/>
+        
+        <views:ToolRow Text="Artistes" Icon="artists"/>
+        <BoxView Margin="45,10,0,10" HeightRequest="1" Color="LightGray" IsVisible="true"/>
+        
+        <views:ToolRow Text="Albums" Icon="albums"/>
+        <BoxView Margin="45,10,0,10" HeightRequest="1" Color="LightGray" IsVisible="true"/>
+        
+        <views:ToolRow Text="Compilaitions" Icon="compilations"/>
+        <BoxView Margin="45,10,0,10" HeightRequest="1" Color="LightGray" IsVisible="true"/>
+
+
 
     </VerticalStackLayout>
 </ContentPage>
