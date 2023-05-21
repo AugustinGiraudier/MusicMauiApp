@@ -60,4 +60,16 @@
 	  <Folder Include="Views\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="Pages\BibliothequePage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\OneTool.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\VueTest.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>

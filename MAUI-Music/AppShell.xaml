@@ -4,15 +4,16 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MAUI_Music"
+    xmlns:pages="clr-namespace:MAUI_Music.Pages"
     Shell.FlyoutBehavior="Disabled">
 
     <TabBar>
 
         <Tab 
             Icon="play"
-            Title="Ecouter">
+            Title="Écouter">    
             <ShellContent
-            ContentTemplate="{DataTemplate local:MainPage}"
+            ContentTemplate="{DataTemplate pages:BibliothequePage}"
             Route="MainPage" />
         </Tab>
 
@@ -20,7 +21,7 @@
             Icon="grid"
             Title="Explorer">
             <ShellContent
-            ContentTemplate="{DataTemplate local:MainPage}"
+            ContentTemplate="{DataTemplate pages:BibliothequePage}"
             Route="MainPage" />
         </Tab>
 
@@ -28,7 +29,7 @@
             Icon="radio"
             Title="Radio">
             <ShellContent
-            ContentTemplate="{DataTemplate local:MainPage}"
+            ContentTemplate="{DataTemplate pages:BibliothequePage}"
             Route="MainPage" />
         </Tab>
 
@@ -36,7 +37,7 @@
             Icon="music"
             Title="Bibliothèque">
             <ShellContent
-            ContentTemplate="{DataTemplate local:MainPage}"
+            ContentTemplate="{DataTemplate pages:BibliothequePage}"
             Route="MainPage" />
         </Tab>
 
@@ -44,7 +45,7 @@
             Icon="search"
             Title="Rechercher">
             <ShellContent
-            ContentTemplate="{DataTemplate local:MainPage}"
+            ContentTemplate="{DataTemplate pages:BibliothequePage}"
             Route="MainPage" />
         </Tab>
 
