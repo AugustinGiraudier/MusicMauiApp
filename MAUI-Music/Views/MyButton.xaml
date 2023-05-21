@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI_Music.Views.MyButton">
+
+
+    <Border StrokeThickness="0" BackgroundColor="#EEEEEF" Padding="15,5,15,5" WidthRequest="140">
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="8" />
+        </Border.StrokeShape>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center"
+                     Margin="6">
+
+            <ImageButton Source="{Binding Icon}"
+                         HeightRequest="15"
+                         WidthRequest="15"/>
+
+            <Label Text="{Binding Text}" 
+                       FontSize="17"
+                       FontAttributes="Bold"
+                       TextColor="{StaticResource Tertiary}"
+                       Margin="5,0,5,0"/>
+        </StackLayout>
+    </Border>
+
+
+</ContentView>

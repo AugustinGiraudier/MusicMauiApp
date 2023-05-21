@@ -57,12 +57,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Pages\" />
-	</ItemGroup>
-
-	<ItemGroup>
+	  <MauiXaml Update="Pages\AlbumPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\BibliothequePage.xaml">
 	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MyButton.xaml">
+	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ToolRow.xaml">
 	    <Generator>MSBuild:Compile</Generator>

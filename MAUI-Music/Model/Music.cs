@@ -10,5 +10,6 @@ namespace MAUI_Music.Model
     {
         public string Name { get; set; }
         public int Duration { get; set; }
+        public int Index { get; set; }
     }
 }

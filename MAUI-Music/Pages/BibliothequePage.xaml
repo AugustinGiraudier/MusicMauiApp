@@ -44,7 +44,8 @@
 
             <CollectionView ItemsSource="{Binding Albums}"
                                 ItemsLayout="VerticalGrid, 2"
-                                SelectionMode="Single">
+                                SelectionMode="Single"
+                                SelectionChanged="OnAlbumClicked">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:Album">
                         <StackLayout Margin="12">

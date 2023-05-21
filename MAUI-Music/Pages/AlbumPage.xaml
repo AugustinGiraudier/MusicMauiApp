@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:MAUI_Music.Views"
+             xmlns:model="clr-namespace:MAUI_Music.Model"
+             x:Class="MAUI_Music.Pages.AlbumPage"
+             Title="Album">
+
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Border
+                Margin="0,20,0,0"
+                HeightRequest="220"
+                WidthRequest="220"
+                >
+                <Border.Shadow>
+                    <Shadow Brush="Black"
+                    Offset="0,20"
+                    Radius="50"
+                    Opacity="0.25" />
+                </Border.Shadow>
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="8" />
+                </Border.StrokeShape>
+                <Image
+                    Source="{Binding Album.Image}"/>
+            </Border>
+
+            <Label
+                Text="{Binding Album.Name}"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                FontSize="Medium"
+                Margin="0,10,0,0"/>
+
+            <Label
+                Text="{Binding Album.Author}"
+                HorizontalTextAlignment="Center"
+                FontSize="Medium"
+                TextColor="{StaticResource Tertiary}"/>
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center">
+
+                <Label Text="{Binding Album.Genre}"   TextColor="Gray" FontAttributes="Bold" FontSize="12"/>
+                <Label Text=" · "               TextColor="Gray" FontAttributes="Bold" FontSize="12"/>
+                <Label Text="{Binding Album.Year}"    TextColor="Gray" FontAttributes="Bold" FontSize="12"/>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout HorizontalOptions="Center" Margin="0,10,0,0">
+            
+                <views:MyButton Text="Lecture" Icon="play_album" />
+                <views:MyButton Text="Aléatoire" Icon="random" Padding="15,0,0,0"/>
+
+            </HorizontalStackLayout>
+
+
+            <BoxView Margin="17,20,0,5" HeightRequest="1" Color="LightGray" IsVisible="true"/>
+            <CollectionView ItemsSource="{Binding Album.Musics}"
+                                Grid.Row="5">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Music">
+                        <StackLayout>
+                            <Grid Margin="0, 8, 0, 8">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="32"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding Index}" 
+                                           FontSize="Subtitle" 
+                                           TextColor="Gray"
+                                           Margin="0,0,8,0"
+                                           HorizontalTextAlignment="Center"
+                                           HorizontalOptions="Center"
+                                           Grid.Column="0"/>
+
+                                <Label Text="{Binding Name}" 
+                                           FontSize="Subtitle" 
+                                           TextColor="Black" 
+                                           LineBreakMode="TailTruncation" 
+                                           Grid.Column="1"/>
+
+                                <Image Source="download"
+                                       HeightRequest="10"
+                                       WidthRequest="10"
+                                       Grid.Column="2"
+                                       Margin="0, 8, 28, 0"
+                                       HorizontalOptions="End" />
+
+                                <Label Text="..." 
+                                           FontSize="Subtitle" 
+                                           TextColor="Black" 
+                                           FontAttributes="Bold" 
+                                           HorizontalOptions="End" 
+                                           Margin="0, 0, 8, 0"
+                                           Grid.Column="3"/>
+                            </Grid>
+
+                            <BoxView Margin="35,5,0,5" HeightRequest="1" Color="LightGray" IsVisible="true"/>
+                        
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label Text="{Binding Album.Date}" TextColor="Gray" FontAttributes="Bold" Margin="20,15,0,0"/>
+            <Label Text="{Binding summary}" TextColor="Gray" FontAttributes="Bold" Margin="20,0,0,0"/>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+    
+    
+</ContentPage>
